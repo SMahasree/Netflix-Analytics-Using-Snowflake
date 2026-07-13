@@ -161,10 +161,12 @@ The dashboard includes:
 ---
 
 ## 📸 Dashboard Preview
+<img width="1163" height="771" alt="Power_BI_Dashboard" src="https://github.com/user-attachments/assets/59738ea5-dfec-496b-a91e-aa03f56a10e1" />
 
 ### Netflix Analytics Dashboard
 
-![Netflix Analytics Dashboard](screenshots/dashboard.png)
+
+
 
 ---
 
