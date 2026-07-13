@@ -1,10 +1,16 @@
-# 🎬 Netflix Analytics Using Snowflake
+# 🎬 Netflix Analytics Using Snowflake & Power BI
+
+An end-to-end data analytics project that demonstrates how to load, transform, analyze, and visualize the Netflix Movies & TV Shows dataset using **Snowflake SQL** and **Power BI**.
+
+---
 
 ## 📌 Project Overview
 
-This project demonstrates how to build an end-to-end data analytics solution using **Snowflake** and SQL. The Netflix Movies & TV Shows dataset is loaded into Snowflake, and various SQL queries are used to analyze content trends, ratings, genres, countries, directors, and release patterns.
+This project demonstrates how to build a complete analytics solution using Snowflake and Power BI.
 
-The project showcases practical SQL concepts commonly used in data engineering and analytics.
+The Netflix Movies & TV Shows dataset is loaded into Snowflake, where SQL queries are used to analyze content trends, ratings, genres, countries, directors, and release patterns. The analyzed data is then visualized through an interactive Power BI dashboard inspired by Netflix's UI.
+
+This project showcases practical SQL concepts, Snowflake data loading, and business intelligence dashboard development.
 
 ---
 
@@ -12,7 +18,9 @@ The project showcases practical SQL concepts commonly used in data engineering a
 
 - Snowflake
 - SQL
-- GitHub
+- Power BI
+- Git & GitHub
+- CSV Dataset
 
 ---
 
@@ -22,7 +30,7 @@ The project showcases practical SQL concepts commonly used in data engineering a
 
 **Source:** Kaggle
 
-The dataset contains information about Netflix content, including:
+The dataset contains information such as:
 
 - Show ID
 - Type (Movie / TV Show)
@@ -45,13 +53,21 @@ The dataset contains information about Netflix content, including:
 Netflix-Analytics-Using-Snowflake/
 │
 ├── README.md
+├── LICENSE
+├── .gitignore
+│
 ├── dataset/
 │   └── netflix_titles.csv
 │
 ├── sql/
-│   └── Netflix_Analytics_Using_Snowflake_Final.sql
+│   └── Netflix_Analytics_Using_Snowflake.sql
+│
+├── powerbi/
+│   └── Netflix_Analytics_Dashboard.pbix
 │
 └── screenshots/
+    ├── dashboard.png
+    ├── sql_results.png
 ```
 
 ---
@@ -60,8 +76,9 @@ Netflix-Analytics-Using-Snowflake/
 
 ### 1. Create Snowflake Objects
 
-Run the SQL script to create:
+Execute the SQL script to create:
 
+- Warehouse
 - Database
 - Schema
 - Table
@@ -70,21 +87,27 @@ Run the SQL script to create:
 
 ### 2. Upload Dataset
 
-Upload `netflix_titles.csv` to the Snowflake stage.
+Upload **netflix_titles.csv** into the Snowflake stage.
 
 ### 3. Load Data
 
-Execute the `COPY INTO` command included in the SQL script.
+Run the `COPY INTO` command to import the dataset into Snowflake.
 
-### 4. Run Analysis
+### 4. Perform SQL Analysis
 
-Execute the remaining SQL queries to analyze the dataset.
+Execute the analytical SQL queries included in the project.
+
+### 5. Open Power BI
+
+- Connect Power BI to Snowflake.
+- Import the `NETFLIX` table.
+- Open the dashboard (`Netflix_Analytics_Dashboard.pbix`).
 
 ---
 
-## 📊 Analysis Performed
+## 📊 SQL Analysis Performed
 
-This project includes analysis such as:
+The project includes analysis such as:
 
 - Total Records
 - Movies vs TV Shows
@@ -104,10 +127,27 @@ This project includes analysis such as:
 
 ---
 
+## 📈 Power BI Dashboard Features
+
+The dashboard includes:
+
+- 📌 Total Titles KPI
+- 🎬 Movies Count
+- 📺 TV Shows Count
+- ⭐ Ratings Count
+- 🌍 Global Content Distribution Map
+- 📈 Content Added by Year
+- 🍩 Movies vs TV Shows Distribution
+- 🎭 Top 10 Directors
+- 🌎 Top 10 Countries
+- ⭐ Rating Distribution
+- 🎛️ Interactive Country Filter
+
+---
+
 ## 💡 SQL Concepts Used
 
 - DDL Commands
-- DML Commands
 - Aggregate Functions
 - GROUP BY
 - ORDER BY
@@ -120,18 +160,11 @@ This project includes analysis such as:
 
 ---
 
-## 📸 Screenshots
+## 📸 Dashboard Preview
 
-Add screenshots of:
+### Netflix Analytics Dashboard
 
-- Database Creation
-- Table Creation
-- Data Loading
-- Sample Data
-- Movies vs TV Shows
-- Top Genres
-- Country Analysis
-- Window Function Output
+![Netflix Analytics Dashboard](screenshots/dashboard.png)
 
 ---
 
@@ -140,29 +173,35 @@ Add screenshots of:
 Through this project, I gained experience in:
 
 - Creating databases and schemas in Snowflake
-- Loading CSV data using stages and `COPY INTO`
+- Loading CSV data using Stages and COPY INTO
 - Writing analytical SQL queries
-- Using CTEs and window functions
+- Using CTEs and Window Functions
 - Performing data quality checks
-- Organizing a Snowflake project for GitHub
+- Connecting Snowflake with Power BI
+- Building an interactive business intelligence dashboard
+- Publishing projects using Git and GitHub
 
 ---
 
 ## 📌 Future Improvements
 
-- Create Views
+- Create SQL Views
 - Implement Stored Procedures
-- Use Streams and Tasks
-- Build a Power BI Dashboard
+- Use Streams & Tasks
+- Build Automated Data Pipelines
 - Add Data Cleaning Scripts
-- Automate Data Loading
+- Create Interactive Power BI Reports with Drill-through
 
 ---
 
 ## 👩‍💻 Author
 
-**Mahasree*
+**Mahasree S**
 
 B.Sc. Artificial Intelligence & Data Science
 
+GitHub: https://github.com/SMahasree
+
 ---
+
+⭐ If you found this project helpful, please consider giving it a **Star** on GitHub.
